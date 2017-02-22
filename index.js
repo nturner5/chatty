@@ -17,7 +17,8 @@ app.post('/messages', function(req, res, next){
     messages.push({ 
         message: req.body.message.msg, 
         time: new Date(),
-         username: req.body.message.username
+         username: req.body.message.username,
+         url: req.body.message.url
     });
     res.status(200).json({ messages: messages })
 })
